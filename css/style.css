@@ -1,16 +1,39 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@100;200;300;400;500;600;700;800;900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,900;1,100;1,300;1,400;1,500;1,900&display=swap');
 
-*{
+* {
     margin: 0px;
     padding: 0px;
     box-sizing: border-box;
 }
+
 body {
     font-family: roboto;
     font-weight: 400;
     color: #9E9EA1;
 }
+section{
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+.hero__inicio {
+    display: grid;
+    width: 100%;
+    grid-template-columns: 20% repeat(3, 1fr) 20%;
+    grid-template-rows: auto;
+    grid-template-areas:
+        "header header header header header"
+        ". clasificados clasificados clasificados ."
+        ". noticiasPrincipales noticiasPrincipales noticiasPrincipales ."
+        ". anunciantes anunciantes anunciantes ." 
+        ". tapaYHumor tapaYHumor tapaYHumor ."
+        ". main main aside ."
+        "footer footer footer footer footer"
+    ;
+}
+
+/* HEADER MENU */
 header {
+    grid-area: header;
     width: 100%;
     height: 80px;
     background-color: #fff;
@@ -21,13 +44,16 @@ header {
     position: sticky;
     top: 0px;
 }
+
 nav {
     width: 60%;
     height: 40px;
     display: flex;
+    flex-direction: row;
     justify-content: space-between;
     font-family: roboto;
 }
+
 nav h1 {
     font-family: roboto slab;
     font-size: 40px;
@@ -35,18 +61,22 @@ nav h1 {
     color: #BBDBE3;
     line-height: 100%;
 }
-nav h1 a {    
+
+nav h1 a {
     text-decoration: none;
     color: #BBDBE3;
 }
+
 nav strong {
     color: #1660A7;
 }
+
 nav ul a {
     text-decoration: none;
     padding: 5px;
     color: #1660A7;
 }
+
 nav ul {
     display: flex;
     flex-direction: row;
@@ -58,64 +88,61 @@ nav ul {
     padding: 5px;
     border-radius: 5px;
 }
+
 nav li {
     padding: 5px;
 }
-nav ul a:hover{
-background-color: #1660A7;
-color: #fff;
-padding: 5px;
-border-radius: 5px;
-}
-main{
-display: flex;
-flex-direction: column;
-align-items: center;
 
-}
-.clasificados{
-    width: 60%;
-    background-color: #BBDBE3;
+nav ul a:hover {
+    background-color: #1660A7;
+    color: #fff;
     padding: 5px;
-    margin-top: 20px;
-    font-size: 12px;
+    border-radius: 5px;
 }
+/* FIN HEADER MENU */
+
+/* CLASIFICADOS */
+.clasificados {
+    grid-area: clasificados;
+    background-color: #BBDBE3;
+    height: 35PX;
+    padding: 5px;
+    font-size: 12px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
 .listadoClasificados {
-    width: 100%;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
     padding: 5px;
 }
+
 .listadoClasificados a {
     text-decoration: none;
     color: #fff;
     background-color: #1660A7;
     padding: 5px;
 }
-section{
-    width: 60%;
+
+/* FIN CLASIFICADOS */
+
+
+/* NOTICIAS PRINCIPALES */
+.contenedorNoticias {
+    grid-area: noticiasPrincipales;
     display: flex;
     justify-content: center;
+
 }
-.nombreSeccion{
-justify-content: flex-start;
-width: 60%;
-background-color: #1660A7;
-color: #fff;
-font-weight: 800; 
-margin-top: 20px;
-margin-bottom: 10px;
-padding: 15px;   
-text-align: left;
-}
+
 .noticiasPrincipales {
-    margin-top: 20px;
-    margin-bottom: 40px;
-    width: 60%;
     display: flex;
     justify-content: space-between;
 }
+
 .noticias1 {
     width: 50%;
     height: 400px;
@@ -176,27 +203,57 @@ text-align: center;
     font-size: 30px;
     text-align: center;
 }
-.anunciantes{
-    width: 100%;
+
+/* FIN NOTICIAS PRINCIPALES */
+
+/* ANUNCIANTES */
+.anunciantes {
+    grid-area: anunciantes;
     display: flex;
+    flex-direction: row;
     justify-content: space-between;
-    padding-top: 20px;
-    padding-bottom: 20px;
+    align-items: center;
+    gap: 20px;
 }
+.LogoAnunciantes img {
+    width: 100%;
+}
+/* FIN ANUNCIANTES */
+
+/* TAPA HUMOR Y EDICIONES ANTERIORES */ 
 .tapaYHumor {
+    grid-area: tapaYHumor;
     display: flex;
     justify-content: space-between;
-    padding-top: 20px;
-    padding-bottom: 40px;
-}
-.tapaYHumor img {
     width: 100%;
-    margin-right: 20px;
+    gap: 20px;
+}
+.tapa {
+    width: 33.33%;
+}
+.tapa img {
+    width: 100%;
+}
+.humor {
+    width: 33.33%;
+}
+.humor img {
+width: 100%;
 }
 .actProfYVersionesAnteriores {
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
+    width: 33.33%;
+}
+.actProfYVersionesAnteriores img {
+    height: auto;
+}
+/* FIN TAPA HUMOR Y EDICIONES ANTERIORES */ 
+
+/* NOTICIAS SECUNDARIAS */ 
+main {
+    grid-area: main;
+    margin-top: 20px;
 }
 .noticiasSecundarias {
     display: flex;
@@ -206,24 +263,12 @@ text-align: center;
 .listaNoticiasSecundarias{
     display: flex;
     flex-direction: column;
-    width: 70%;
 }
 .listaNoticiasSecundarias h2{
     color: #1660A7;
     padding-bottom: 20px;
     font-size: 30px;
 }
-.publicidad {
-    width: 30%;
-    margin-left:40px ;
-    display: flex;
-    flex-direction: column;
-}
-.publicidad img {
-    width: 100%;
-    padding-bottom: 20px;
-}
-
 article{
     border-top: 1px solid #BBDBE3;
     padding-top: 20px;
@@ -254,246 +299,74 @@ article a  {
     text-decoration: none;
 }
 
-.compartir {
+
+/* FIN NOTICIAS SECUNDARIAS */ 
+
+
+/* PUBLICIDAD */
+aside {
+    grid-area: aside;
     display: flex;
-    justify-content: flex-end;
-    padding-bottom: 20px;
-    align-items: center;
-    margin: 5px;
-}
-.compartir img {
-    width: 40px;
-    border-radius: 5px;
-    padding: 0px;
-    margin-left: 10px;
-}
-.nota {
     flex-direction: column;
+    align-items: end;
+    margin-left: 20px;
+    margin-top: 20px;
 }
-.notaCompleta{
+aside img {
     width: 100%;
+    margin-bottom: 20px;
+}
+/* FIN PUBLICIDAD */
+
+/* FOOTEER */
+footer {
+    grid-area: footer;
+    width: 100%;
+    background-color: #1660A7;
+    font-family: roboto;
+    color: #fff;
     display: flex;
     justify-content: center;
-}
-.tituloNota {
-    width: 100%;
     flex-direction: column;
-    margin-top: 20px;
-    margin-bottom: 20px;
+    align-items: center;
+    bottom: 0px;
 }
-.tituloNota span {
-    color: #9E9EA1;
-}
-.tituloNota h2 {
-    color: #1660A7;
-    font-size: 35px;
-}
-.cuerpoNota {
-    width: 70%;
-    margin-bottom: 40px;
-}
-.cuerpoNota .bajada {
-    background-color: #DEDEDE;
-    border-left: 10px solid #1660A7;
-    color: #89898a;
-    padding: 20px;
-}
-.imgPortada {
-    width: 100%;
-    height: 300px;
-    object-fit: cover;
-    margin-top: 20px;
-    margin-bottom: 20px;
-}
-.cuerpoNota p {
-    text-align: justify;
-    margin-bottom: 20px;
-    line-height: 150%;
-}
-.cuerpoNota h4 {
-    color: #1660A7;
-    font-size: 20px;
-    margin-top: 20px;
-    margin-bottom: 20px;
-}
-.cuerpoNota li {
-    text-align: justify;
-    margin-bottom: 10px;
-}
-.cuerpoNota a {
-    text-decoration: none;
-    color: #1660A7;
-    font-weight: bold;
-    padding: 5px;
 
-}
-.cuerpoNota a:hover {
-    background-color: #1660A7;
-    color: #fff;
-    padding: 5px;
-border-radius: 5px;
-}
-.imgCuerpoNota {
-    width: 100%;
-    margin-top: 20px;
-    margin-bottom: 20px;
-}
- /* INSTITUCIONAL  */
-
-.noticiaInstitucional1 {
-    width: 50%;
-    height: 400px;
-    margin-right: 10px;
-    background-image: url(../assets/images/img8.png);
-    background-size: cover;
+.footer {
+    width: 60%;
     display: flex;
-    flex-direction: column;
-    justify-content: flex-end;
-}
-.noticiasChicaInstitucional1 {
-    height: 50%;
-    background-image: url(../assets/images/img9.png);
-    background-size: cover;
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-end;
-}
-.noticiasChicaInstitucional2 {
-    height: 47%;
-    background-image: url(../assets/images/img10.png);
-    background-size: cover;
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-end;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 20px;
+    padding-bottom: 20px;
 }
 
-.noticiaInstitucional1 h2 {
-    background-color: #1661a7a8 ;
-    padding: 20px;
-    color: #fff;
-    font-size: 40px;
-    text-align: center;
-    }
-.noticiaInstitucional1 a{
-    text-decoration: none;
-} 
-.noticiasChicaInstitucional1 h2 {    
-    background-color: #1661a7a8 ;
-    padding: 20px;
-    color: #fff;
-    font-size: 30px;
-    text-align: center;
-}
-.noticiasChicaInstitucional2 h2 {    
-    background-color: #1661a7a8 ;
-    padding: 20px;
-    color: #fff;
-    font-size: 30px;
-    text-align: center;
-}
- /* TERMINA INSTITUCIONAL  */
-
- /* FBA  */
-
-.noticiaFBA1 {
-    width: 50%;
-    height: 400px;
-    margin-right: 10px;
-    background-image: url(../assets/images/img11.png);
-    background-size: cover;
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-end;
-}
-.noticiasChicaFBA1 {
-    height: 50%;
-    background-image: url(../assets/images/img13.png);
-    background-size: cover;
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-end;
-}
-.noticiasChicaFBA2 {
-    height: 47%;
-    background-image: url(../assets/images/img12.png);
-    background-size: cover;
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-end;
-}
-
-.noticiaFBA1 h2 {
-    background-color: #1661a7a8 ;
-    padding: 20px;
-    color: #fff;
-    font-size: 40px;
-    text-align: center;
-    }
-.noticiaFBA1 a{
-    text-decoration: none;
-} 
-.noticiasChicaFBA1 h2 {    
-    background-color: #1661a7a8 ;
-    padding: 20px;
-    color: #fff;
-    font-size: 30px;
-    text-align: center;
-}
-.noticiasChicaFBA2 h2 {    
-    background-color: #1661a7a8 ;
-    padding: 20px;
-    color: #fff;
-    font-size: 30px;
-    text-align: center;
-}
-.noticiasChicaFBA1 a {
-    text-decoration: none;
-}
-.noticiasChicaFBA2 a {
-    text-decoration: none;
-}
- /* TERMINA FBA  */
-
-footer {    
-background-color: #1660A7;
-font-family: roboto;
-color: #fff;
-display: flex;
-justify-content: center;
-flex-direction: row;
-flex-wrap: wrap;
-height: 250px;
-
-}
-footer .footer {    
-width: 60%;
-display: flex;
-justify-content: space-between;
-align-items: center;
-margin-top: 30px;
-}
 footer h1 {
     font-family: roboto slab;
     font-weight: 300;
     font-size: 40px;
 }
-footer .informacion{
+
+footer .informacion {
     width: 400px;
 }
+
 footer img {
     border-radius: 5px;
     width: 40px;
     margin-left: 20px;
 }
+
 footer p {
     font-weight: 400;
     padding-top: 5px;
 }
+
 .faba img {
     width: 170px;
-    margin-top: 40px;
 }
-footer .creador {
+
+.creador {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -502,9 +375,94 @@ footer .creador {
     background-color: #BBDBE3;
     color: #1660A7;
     height: 40px;
-    margin-top: 20px;
 }
-footer a{
+
+footer a {
     text-decoration: none;
     color: #fff;
+}
+/* FIN FOOTEER */
+
+/* MEDIAS QUERIES */
+@media (max-width: 1440px) {    
+.hero__inicio {
+    grid-template-columns: 10% repeat(3, 1fr) 10%;
+    grid-template-rows: auto;
+    grid-template-areas:
+        "header header header header header"
+        ". clasificados clasificados clasificados ."
+        ". noticiasPrincipales noticiasPrincipales noticiasPrincipales ."
+        ". anunciantes anunciantes anunciantes ." 
+        ". tapaYHumor tapaYHumor tapaYHumor ."
+        ". main main aside ."
+        "footer footer footer footer footer"
+    ;
+}
+nav {
+    width: 80%;
+}
+.footer {
+    width: 80%;
+}
+}
+
+@media (max-width: 1024px){
+
+    .hero__inicio {
+        grid-template-columns:1fr;
+        grid-template-rows: auto;
+        grid-template-areas:
+            "header"
+            "clasificados"
+            "noticiasPrincipales"
+            "anunciantes"
+            "tapaYHumor"
+            "main"
+            "aside"
+            "footer"
+        ;
+        
+    }
+    nav {
+        width: 100%;
+        margin-left: 100px ;
+        margin-right: 100px ;
+    } 
+    .clasificados{
+        padding-left: 100px ;
+        padding-right: 100px ;
+    }
+    .noticiasPrincipales{
+        padding-left: 100px ;
+        padding-right: 100px ;
+    }
+    .anunciantes {
+        padding-left: 100px ;
+        padding-right: 100px ;
+    }
+    .tapaYHumor {
+        padding-left: 100px ;
+        padding-right: 100px ;
+    }
+    main {
+        padding-left: 100px ;
+        padding-right: 100px ;
+    }
+
+    .footer{
+        width: 100%;
+        padding-left: 100px ;
+        padding-right: 100px ;
+    }
+    aside {
+        flex-direction: row;
+        margin-left: 0px;
+        gap: 20px;
+        padding-left: 100px ;
+        padding-right: 100px ;
+
+    }
+    aside img {
+        width: 50%;
+    }
 }
