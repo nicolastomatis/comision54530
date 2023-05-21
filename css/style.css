@@ -33,6 +33,19 @@ section{
         "footer footer footer footer footer"
     ;
 }
+.hero__seccion {
+    display: grid;
+    width: 100%;
+    grid-template-columns: 20% repeat(3, 1fr) 20%;
+    grid-template-rows: auto;
+    grid-template-areas:
+        "header header header header header"
+        ". seccion seccion seccion ."
+        ". noticiasPrincipales noticiasPrincipales noticiasPrincipales ."
+        ". main main aside ." 
+        "footer footer footer footer footer"
+    ;
+}
 .hero__noticia {
     display: grid;
     width: 100%;
@@ -294,7 +307,6 @@ article{
     display: flex;
     font-size: 1.5rem;
 }
-
 article img {
     width: 300px;
     height: 200px;
@@ -354,6 +366,7 @@ aside img {
     margin-bottom: 20px;
 }
 .tituloNota span {
+    font-size: 1.5rem;
     color: #9E9EA1;
 }
 .tituloNota h2 {
@@ -416,6 +429,7 @@ blockquote {
     margin-bottom: 20px;
 }
 .cuerpoNota li {
+    font-size: 1.5rem;
     text-align: justify;
     margin-bottom: 10px;
 }
@@ -519,7 +533,6 @@ footer a {
         ". noticiasPrincipales noticiasPrincipales noticiasPrincipales ."
         ". anunciantes anunciantes anunciantes ." 
         ". tapaYHumor tapaYHumor tapaYHumor ."
-        ". main main aside ."
         "footer footer footer footer footer"
     ;
 }
