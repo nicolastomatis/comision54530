@@ -5,6 +5,9 @@
     padding: 0px;
     box-sizing: border-box;
 }
+html {
+    font-size: 62.5%;
+}
 
 body {
     font-family: roboto;
@@ -30,7 +33,21 @@ section{
         "footer footer footer footer footer"
     ;
 }
-
+.hero__noticia {
+    display: grid;
+    width: 100%;
+    grid-template-columns: 20% repeat(3, 1fr) 20%;
+    grid-template-rows: auto;
+    grid-template-areas:
+        "header header header header header"
+        ". seccion seccion seccion ."
+        ". titulo titulo titulo ."
+        ". imagen imagen imagen ." 
+        ". bajada bajada compartir ."
+        ". cuerpoNota cuerpoNota aside ."
+        "footer footer footer footer footer"
+    ;
+}
 /* HEADER MENU */
 header {
     grid-area: header;
@@ -52,11 +69,12 @@ nav {
     flex-direction: row;
     justify-content: space-between;
     font-family: roboto;
+    font-size: 1.5rem;
 }
 
 nav h1 {
     font-family: roboto slab;
-    font-size: 40px;
+    font-size: 4rem;
     font-weight: 400;
     color: #BBDBE3;
     line-height: 100%;
@@ -107,7 +125,7 @@ nav ul a:hover {
     background-color: #BBDBE3;
     height: 35PX;
     padding: 5px;
-    font-size: 12px;
+    font-size: 1.2rem;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -157,7 +175,7 @@ nav ul a:hover {
 background-color: #1661a77c ;
 padding: 20px;
 color: #fff;
-font-size: 40px;
+font-size: 4rem;
 text-align: center;
 }
 .noticias1 a{
@@ -193,14 +211,14 @@ text-align: center;
     background-color: #1661a77c ;
     padding: 20px;
     color: #fff;
-    font-size: 30px;
+    font-size: 3rem;
     text-align: center;
 }
 .noticiasChica2 h2 {    
     background-color: #1661a77c ;
     padding: 20px;
     color: #fff;
-    font-size: 30px;
+    font-size: 3rem;
     text-align: center;
 }
 
@@ -267,13 +285,14 @@ main {
 .listaNoticiasSecundarias h2{
     color: #1660A7;
     padding-bottom: 20px;
-    font-size: 30px;
+    font-size: 3rem;
 }
 article{
     border-top: 1px solid #BBDBE3;
     padding-top: 20px;
     padding-bottom: 20px;
     display: flex;
+    font-size: 1.5rem;
 }
 
 article img {
@@ -298,10 +317,7 @@ article a  {
     border-radius: 5px;
     text-decoration: none;
 }
-
-
 /* FIN NOTICIAS SECUNDARIAS */ 
-
 
 /* PUBLICIDAD */
 aside {
@@ -317,6 +333,112 @@ aside img {
     margin-bottom: 20px;
 }
 /* FIN PUBLICIDAD */
+
+/* ESTILOS NOTICIA */
+.nombreSeccion{
+    grid-area: seccion;
+    justify-content: flex-start;
+    background-color: #1660A7;
+    color: #fff;
+    font-size: 1.5rem;
+    font-weight: 800; 
+    margin-top: 20px;
+    margin-bottom: 10px;
+    padding: 15px;   
+    text-align: left;
+    }
+.tituloNota {
+    grid-area: titulo;
+    flex-direction: column;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+.tituloNota span {
+    color: #9E9EA1;
+}
+.tituloNota h2 {
+    color: #1660A7;
+    font-size: 3.5rem;
+}
+.imgPortada {
+    grid-area: imagen;
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+.bajada {
+    grid-area: bajada;
+    font-size: 1.5rem;
+    background-color: #DEDEDE;
+    border-left: 10px solid #1660A7;
+    color: #89898a;
+    padding: 20px;
+}
+blockquote {
+    grid-area: bajada;
+    font-size: 1.5rem;
+    background-color: #DEDEDE;
+    border-left: 10px solid #1660A7;
+    color: #89898a;
+    padding: 20px;
+}
+.compartir {
+    grid-area: compartir;
+    font-size: 1.5rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 5px;
+}
+.compartir img {
+    width: 40px;
+    border-radius: 5px;
+    padding: 0px;
+    margin-left: 10px;
+}
+
+.cuerpoNota {
+    grid-area: cuerpoNota;
+    margin-bottom: 40px;
+}
+.cuerpoNota p {
+    text-align: justify;
+    font-size: 1.5rem;
+    margin-bottom: 20px;
+    line-height: 150%;
+}
+.cuerpoNota h4 {
+    color: #1660A7;
+    font-size: 2rem;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+.cuerpoNota li {
+    text-align: justify;
+    margin-bottom: 10px;
+}
+.cuerpoNota a {
+    text-decoration: none;
+    color: #1660A7;
+    font-weight: bold;
+    padding: 5px;
+
+}
+.cuerpoNota a:hover {
+    background-color: #1660A7;
+    color: #fff;
+    padding: 5px;
+border-radius: 5px;
+}
+.imgCuerpoNota {
+    width: 100%;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+/* FIN ESTILOS NOTICIA */
 
 /* FOOTEER */
 footer {
@@ -338,17 +460,19 @@ footer {
     justify-content: space-between;
     align-items: center;
     padding-top: 20px;
+    font-size: 1.5rem;
     padding-bottom: 20px;
 }
 
 footer h1 {
     font-family: roboto slab;
     font-weight: 300;
-    font-size: 40px;
+    font-size: 4rem;
 }
 
 footer .informacion {
-    width: 400px;
+}
+footer .redesSociales {
 }
 
 footer img {
@@ -368,6 +492,7 @@ footer p {
 
 .creador {
     display: flex;
+    font-size: 1.5;
     justify-content: center;
     align-items: center;
     width: 100%;
@@ -398,6 +523,19 @@ footer a {
         "footer footer footer footer footer"
     ;
 }
+.hero__noticia {
+    grid-template-columns: 10% repeat(3, 1fr) 10%;
+    grid-template-rows: auto;
+    grid-template-areas:
+    "header header header header header"
+    ". seccion seccion seccion ."
+    ". titulo titulo titulo ."
+    ". imagen imagen imagen ." 
+    ". bajada bajada compartir ."
+    ". cuerpoNota cuerpoNota aside ."
+    "footer footer footer footer footer"
+    ;
+}
 nav {
     width: 80%;
     top: 0px;
@@ -408,6 +546,9 @@ nav {
 }
 
 @media (max-width: 1024px){
+    html{
+        font-size: 1.5rem;
+    }
 
     .hero__inicio {
         grid-template-columns:1fr;
@@ -419,6 +560,22 @@ nav {
             "anunciantes"
             "tapaYHumor"
             "main"
+            "aside"
+            "footer"
+        ;
+        
+    }
+    .hero__noticia {
+        grid-template-columns:1fr;
+        grid-template-rows: auto;
+        grid-template-areas:
+            "header"
+            "seccion"
+            "titulo"
+            "imagen"
+            "bajada"
+            "compartir"
+            "cuerpoNota"
             "aside"
             "footer"
         ;
@@ -449,8 +606,27 @@ nav {
     main {
         padding-left: 100px ;
         padding-right: 100px ;
+    }     
+    .nombreSeccion{
+        margin-left: 100px ;
+        margin-right: 100px ;
+    }     
+    .tituloNota{
+        padding-left: 100px ;
+        padding-right: 100px ;
+    }     
+    .imgPortada{
+        padding-left: 100px ;
+        padding-right: 100px ;
+    } 
+    .bajada{
+        margin-left: 100px ;
+        margin-right: 100px ;
+    } 
+    .cuerpoNota{
+        padding-left: 100px ;
+        padding-right: 100px ;
     }
-
     .footer{
         width: 100%;
         padding-left: 100px ;
@@ -466,5 +642,10 @@ nav {
     }
     aside img {
         width: 50%;
+    }
+}
+@media (max-width: 425px){
+    html{
+        font-size: 3rem;
     }
 }
