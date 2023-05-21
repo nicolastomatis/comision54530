@@ -178,7 +178,7 @@ nav ul a:hover {
     width: 50%;
     height: 400px;
     margin-right: 10px;
-    background-image: url(../assets/images/img1.png);
+    background-image: url(../assets/images/img1.PNG);
     background-size: cover;
     display: flex;
     flex-direction: column;
