@@ -12,15 +12,18 @@
     <link
         href="https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@100;600;700&family=Roboto:wght@100;700&display=swap"
         rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css">
     <title>FABA Informa</title>
 </head>
 
 <body>
     <div class="hero__inicio">
         <header>
-            <nav>
-                <h1 class="logotipo"><a href="index.html"><strong>FABA</strong>Informa</span></a></h1>
-                <ul class="navBar">
+            <h1 class="logotipo"><a href="../index.html"><strong>FABA</strong>Informa</span></a></h1>
+            <button id="abrir" class="abrir-menu"><i class="bi bi-list"></i></button>
+            <nav class="nav" id="nav">
+                <ul class="nav-list">
+                    <button class="cerrar-menu" id="cerrar"><i class="bi bi-x"></i></button>
                     <li><a href="./pages/institucional.html">Institucional</a></li>
                     <li><a href="./pages/actualidadCientifica.html">Actualidad científica</a></li>
                     <li><a href="./pages/interesGeneral.html">Interés General</a></li>
@@ -30,150 +33,149 @@
                 </ul>
             </nav>
         </header>
-
         <section class="clasificados">
             <div class="listadoClasificados">
                 <p>VENDO: Urgente laboratorio acreditado ubicado en Adrogué Centro, Distrito II. Escucho ofertas.
                     Contacto Teléfono: 011 42946131/ Celular: 1161995225.</p>
-                <p><a href="">ver más clasificados</a></p>
+                <a href="#" class="button">ver más clasificados</a>
             </div>
         </section>
 
         <section class="contenedorNoticias">
             <div class="noticiasPrincipales">
-            <div class="noticias1">
-                <a href="">
-                    <h2>Mayoría femenina al frente de la dirigencia bioquímica.</h2>
-                </a>
-            </div>
-            <div class="noticias2">
-                <div class="noticiasChica1">
+                <div class="noticias1">
                     <a href="">
-                        <h2>Competencia ética y constructiva</h2>
+                        <h2>Mayoría femenina al frente de la dirigencia bioquímica.</h2>
                     </a>
                 </div>
-                <div class="noticiasChica2">
-                    <a href="">
-                        <h2>Homenaje al Dr. Juan Miguel Castagnino</h2>
-                    </a>
+                <div class="noticias2">
+                    <div class="noticiasChica1">
+                        <a href="">
+                            <h2>Competencia ética y constructiva</h2>
+                        </a>
+                    </div>
+                    <div class="noticiasChica2">
+                        <a href="">
+                            <h2>Homenaje al Dr. Juan Miguel Castagnino</h2>
+                        </a>
+                    </div>
                 </div>
             </div>
-        </div>
         </section>
 
         <section class="anunciantes">
-            <div class="LogoAnunciantes"><img src="./assets/images/anunciantes/aadee.jpg" alt=""></div>
-            <div class="LogoAnunciantes"><img src="./assets/images/anunciantes/ab.jpg" alt=""></div>
-            <div class="LogoAnunciantes"><img src="./assets/images/anunciantes/biodiagnostico.jpg" alt=""></div>
-            <div class="LogoAnunciantes"><img src="./assets/images/anunciantes/emsa.jpg" alt=""></div>
-            <div class="LogoAnunciantes"><img src="./assets/images/anunciantes/faba.jpg" alt=""></div>
-            <div class="LogoAnunciantes"><img src="./assets/images/anunciantes/laborteknic.jpg" alt=""></div>
         </section>
 
         <section class="tapaYHumor">
             <div class="tapa">
-                <img src="./assets/images/tapa.PNG" alt="">
+                <img src="./assets/images/tapa.png" alt="">
+                <h2 class="tituloSeccion">Revista Nº 607</h2>
             </div>
-            <div class="humor">
-                <img src="./assets/images/humor.PNG" alt="">
+            <div class="tapa">
+                <img src="./assets/images/humor.png" alt="">
+                <h2 class="tituloSeccion">Humor por Libman</h2>
             </div>
-            <div class="actProfYVersionesAnteriores">
+            <div class="tapa">
                 <img src="./assets/images/versionesAnteriores.png" alt="">
-                <img src="./assets/images/actualizacionProfesional.PNG" alt="">
+                <h2 class="tituloSeccion">Ediciones anteriores</h2>
+            </div>
+            <div class="tapa">
+                <img src="./assets/images/actualizacionProfesional.png" alt="">
+                <h2 class="tituloSeccion">Actualización Profesional</h2>
             </div>
         </section>
 
         <main>
-                <div class="listaNoticiasSecundarias">
-                    <article>
-                        <div>
-                            <img src="./assets/images/img4.png">
-                        </div>
-                        <div>
-                            <h3>FABA firmó un convenio de cooperación con IPEGSA</h3>
-                            <p>Se trata de un acuerdo de cooperación para la formación, capacitación y desarrollo de
-                                Recursos Humanos, desarrollo de investigaciones y/o programas de asistencias técnicas
-                                para la gestión de instituciones públicas y/o privadas de salud.</p>
-                            <p><a href="">Leer más</a></p>
-                        </div>
-                    </article>
-                    <article>
-                        <div>
-                            <img src="./assets/images/img4.png">
-                        </div>
-                        <div>
-                            <h3>FABA firmó un convenio de cooperación con IPEGSA</h3>
-                            <p>Se trata de un acuerdo de cooperación para la formación, capacitación y desarrollo de
-                                Recursos Humanos, desarrollo de investigaciones y/o programas de asistencias técnicas
-                                para la gestión de instituciones públicas y/o privadas de salud.</p>
-                            <p><a href="">Leer más</a></p>
-                        </div>
-                    </article>
-                    <article>
-                        <div>
-                            <img src="./assets/images/img4.png">
-                        </div>
-                        <div>
-                            <h3>FABA firmó un convenio de cooperación con IPEGSA</h3>
-                            <p>Se trata de un acuerdo de cooperación para la formación, capacitación y desarrollo de
-                                Recursos Humanos, desarrollo de investigaciones y/o programas de asistencias técnicas
-                                para la gestión de instituciones públicas y/o privadas de salud.</p>
-                            <p><a href="">Leer más</a></p>
-                        </div>
-                    </article>
-                    <article>
-                        <div>
-                            <img src="./assets/images/img4.png">
-                        </div>
-                        <div>
-                            <h3>FABA firmó un convenio de cooperación con IPEGSA</h3>
-                            <p>Se trata de un acuerdo de cooperación para la formación, capacitación y desarrollo de
-                                Recursos Humanos, desarrollo de investigaciones y/o programas de asistencias técnicas
-                                para la gestión de instituciones públicas y/o privadas de salud.</p>
-                            <p><a href="">Leer más</a></p>
-                        </div>
-                    </article>
-                    <article>
-                        <div>
-                            <img src="./assets/images/img4.png">
-                        </div>
-                        <div>
-                            <h3>FABA firmó un convenio de cooperación con IPEGSA</h3>
-                            <p>Se trata de un acuerdo de cooperación para la formación, capacitación y desarrollo de
-                                Recursos Humanos, desarrollo de investigaciones y/o programas de asistencias técnicas
-                                para la gestión de instituciones públicas y/o privadas de salud.</p>
-                            <p><a href="">Leer más</a></p>
-                        </div>
-                    </article>
-                    <article>
-                        <div>
-                            <img src="./assets/images/img4.png">
-                        </div>
-                        <div>
-                            <h3>FABA firmó un convenio de cooperación con IPEGSA</h3>
-                            <p>Se trata de un acuerdo de cooperación para la formación, capacitación y desarrollo de
-                                Recursos Humanos, desarrollo de investigaciones y/o programas de asistencias técnicas
-                                para la gestión de instituciones públicas y/o privadas de salud.</p>
-                            <p><a href="">Leer más</a></p>
-                        </div>
-                    </article>
-                    <article>
-                        <div>
-                            <img src="./assets/images/img4.png">
-                        </div>
-                        <div>
-                            <h3>FABA firmó un convenio de cooperación con IPEGSA</h3>
-                            <p>Se trata de un acuerdo de cooperación para la formación, capacitación y desarrollo de
-                                Recursos Humanos, desarrollo de investigaciones y/o programas de asistencias técnicas
-                                para la gestión de instituciones públicas y/o privadas de salud.</p>
-                            <p><a href="">Leer más</a></p>
-                        </div>
-                    </article>
-                </div>
+            <div class="listaNoticiasSecundarias">
+                <article>
+                    <div>
+                        <img src="./assets/images/img4.png">
+                    </div>
+                    <div>
+                        <h3>FABA firmó un convenio de cooperación con IPEGSA</h3>
+                        <p>Se trata de un acuerdo de cooperación para la formación, capacitación y desarrollo de
+                            Recursos Humanos, desarrollo de investigaciones y/o programas de asistencias técnicas
+                            para la gestión de instituciones públicas y/o privadas de salud.</p>
+                        <p><a href="">Leer más</a></p>
+                    </div>
+                </article>
+                <article>
+                    <div>
+                        <img src="./assets/images/img4.png">
+                    </div>
+                    <div>
+                        <h3>FABA firmó un convenio de cooperación con IPEGSA</h3>
+                        <p>Se trata de un acuerdo de cooperación para la formación, capacitación y desarrollo de
+                            Recursos Humanos, desarrollo de investigaciones y/o programas de asistencias técnicas
+                            para la gestión de instituciones públicas y/o privadas de salud.</p>
+                        <p><a href="">Leer más</a></p>
+                    </div>
+                </article>
+                <article>
+                    <div>
+                        <img src="./assets/images/img4.png">
+                    </div>
+                    <div>
+                        <h3>FABA firmó un convenio de cooperación con IPEGSA</h3>
+                        <p>Se trata de un acuerdo de cooperación para la formación, capacitación y desarrollo de
+                            Recursos Humanos, desarrollo de investigaciones y/o programas de asistencias técnicas
+                            para la gestión de instituciones públicas y/o privadas de salud.</p>
+                        <p><a href="">Leer más</a></p>
+                    </div>
+                </article>
+                <article>
+                    <div>
+                        <img src="./assets/images/img4.png">
+                    </div>
+                    <div>
+                        <h3>FABA firmó un convenio de cooperación con IPEGSA</h3>
+                        <p>Se trata de un acuerdo de cooperación para la formación, capacitación y desarrollo de
+                            Recursos Humanos, desarrollo de investigaciones y/o programas de asistencias técnicas
+                            para la gestión de instituciones públicas y/o privadas de salud.</p>
+                        <p><a href="">Leer más</a></p>
+                    </div>
+                </article>
+                <article>
+                    <div>
+                        <img src="./assets/images/img4.png">
+                    </div>
+                    <div>
+                        <h3>FABA firmó un convenio de cooperación con IPEGSA</h3>
+                        <p>Se trata de un acuerdo de cooperación para la formación, capacitación y desarrollo de
+                            Recursos Humanos, desarrollo de investigaciones y/o programas de asistencias técnicas
+                            para la gestión de instituciones públicas y/o privadas de salud.</p>
+                        <p><a href="">Leer más</a></p>
+                    </div>
+                </article>
+                <article>
+                    <div>
+                        <img src="./assets/images/img4.png">
+                    </div>
+                    <div>
+                        <h3>FABA firmó un convenio de cooperación con IPEGSA</h3>
+                        <p>Se trata de un acuerdo de cooperación para la formación, capacitación y desarrollo de
+                            Recursos Humanos, desarrollo de investigaciones y/o programas de asistencias técnicas
+                            para la gestión de instituciones públicas y/o privadas de salud.</p>
+                        <p><a href="">Leer más</a></p>
+                    </div>
+                </article>
+                <article>
+                    <div>
+                        <img src="./assets/images/img4.png">
+                    </div>
+                    <div>
+                        <h3>FABA firmó un convenio de cooperación con IPEGSA</h3>
+                        <p>Se trata de un acuerdo de cooperación para la formación, capacitación y desarrollo de
+                            Recursos Humanos, desarrollo de investigaciones y/o programas de asistencias técnicas
+                            para la gestión de instituciones públicas y/o privadas de salud.</p>
+                        <p><a href="">Leer más</a></p>
+                    </div>
+                </article>
+            </div>
         </main>
         <aside>
-                <img src="./assets/images/publicidad1.png">
-                <img src="./assets/images/publicidad2.png">
+            <img src="./assets/images/publicidad1.png">
+            <img src="./assets/images/publicidad2.png">
         </aside>
         <footer>
             <div class="footer">
@@ -188,7 +190,7 @@
                     <p><strong>Publicidad:</strong> Calle 6 n° 1344</p>
                     <p><strong>Tel:</strong> (+54+221) 483-8821 / 482-2797 int. 350</p>
                 </div>
-                <div>
+                <div class="contactos">
                     <div class="redesSociales">
                         <a href="https://www.facebook.com/revista.FABAInforma" target="_blank"><img
                                 src="assets/images/facebook.png" alt="Facebook"></a>
@@ -210,5 +212,6 @@
         </footer>
     </div>
 </body>
+<script src="js/script.js"></script>
 
 </html>

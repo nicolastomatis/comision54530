@@ -61,6 +61,7 @@ section{
         "footer footer footer footer footer"
     ;
 }
+
 /* HEADER MENU */
 header {
     grid-area: header;
@@ -70,9 +71,12 @@ header {
     box-shadow: 0px 1px 10px rgb(156, 156, 156);
     display: flex;
     align-items: center;
-    justify-content: center;
+    justify-content: space-between;
     position: sticky;
     top: 0px;
+    z-index: 99;
+    padding-left: 20%;
+    padding-right: 20%;
 }
 
 nav {
@@ -80,12 +84,12 @@ nav {
     height: 40px;
     display: flex;
     flex-direction: row;
-    justify-content: space-between;
+    justify-content: flex-end;
     font-family: roboto;
     font-size: 1.5rem;
 }
 
-nav h1 {
+header h1 {
     font-family: roboto slab;
     font-size: 4rem;
     font-weight: 400;
@@ -93,14 +97,15 @@ nav h1 {
     line-height: 100%;
 }
 
-nav h1 a {
+header h1 a {
     text-decoration: none;
     color: #BBDBE3;
 }
 
-nav strong {
+header strong {
     color: #1660A7;
 }
+
 
 nav ul a {
     text-decoration: none;
@@ -130,14 +135,16 @@ nav ul a:hover {
     padding: 5px;
     border-radius: 5px;
 }
+.abrir-menu,
+.cerrar-menu {
+    display: none;
+}
 /* FIN HEADER MENU */
 
 /* CLASIFICADOS */
 .clasificados {
     grid-area: clasificados;
     background-color: #BBDBE3;
-    height: 35PX;
-    padding: 5px;
     font-size: 1.2rem;
     display: flex;
     flex-direction: column;
@@ -148,14 +155,19 @@ nav ul a:hover {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
+}
+.clasificados p {
     padding: 5px;
 }
 
-.listadoClasificados a {
-    text-decoration: none;
+.button {    
     color: #fff;
     background-color: #1660A7;
     padding: 5px;
+    text-decoration: none;
+}
+
+.button a {
 }
 
 /* FIN CLASIFICADOS */
@@ -178,7 +190,7 @@ nav ul a:hover {
     width: 50%;
     height: 400px;
     margin-right: 10px;
-    background-image: url(../assets/images/img1.PNG);
+    background-image: url(../assets/images/img1.png);
     background-size: cover;
     display: flex;
     flex-direction: column;
@@ -200,6 +212,7 @@ text-align: center;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+    gap: 20px;
 }
 .noticias2 a{
     text-decoration: none;
@@ -213,7 +226,7 @@ text-align: center;
     justify-content: flex-end;
 }
 .noticiasChica2 {
-    height: 47%;
+    height: 50%;
     background-image: url(../assets/images/img3.png);
     background-size: cover;
     display: flex;
@@ -257,27 +270,31 @@ text-align: center;
     display: flex;
     justify-content: space-between;
     width: 100%;
-    gap: 20px;
+    gap: 10px;
 }
 .tapa {
-    width: 33.33%;
+    width: 25%;
+    position: relative;
+    height: 400px;
 }
 .tapa img {
+    height: 400px;
     width: 100%;
+    object-fit: cover;
 }
-.humor {
-    width: 33.33%;
-}
-.humor img {
-width: 100%;
-}
-.actProfYVersionesAnteriores {
-    display: flex;
-    flex-direction: column;
-    width: 33.33%;
-}
-.actProfYVersionesAnteriores img {
-    height: auto;
+
+.tituloSeccion {    
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  background-color: #1661a7af ;
+  color: #fff;
+  font-size: 3rem;
+  padding: 20px;
+  padding: 10px;
+  margin: 0;
+  text-align: center;
 }
 /* FIN TAPA HUMOR Y EDICIONES ANTERIORES */ 
 
@@ -469,13 +486,15 @@ footer {
 }
 
 .footer {
-    width: 60%;
+    width: 80%;
     display: flex;
     justify-content: space-between;
     align-items: center;
     padding-top: 20px;
     font-size: 1.5rem;
     padding-bottom: 20px;
+    padding-left: 10%;
+    padding-right: 10%;
 }
 
 footer h1 {
@@ -486,7 +505,7 @@ footer h1 {
 footer img {
     border-radius: 5px;
     width: 40px;
-    margin-left: 20px;
+    margin: 10px;
 }
 
 footer p {
@@ -496,18 +515,19 @@ footer p {
 
 .faba img {
     width: 170px;
+    margin: 10px;
 }
 
 .creador {
     display: flex;
-    font-size: 1.5;
+    font-size: 1.5rem;
     justify-content: center;
     align-items: center;
     width: 100%;
     text-align: center;
     background-color: #BBDBE3;
     color: #1660A7;
-    height: 40px;
+    padding: 10px;
 }
 
 footer a {
@@ -522,11 +542,23 @@ footer a {
     grid-template-columns: 10% repeat(3, 1fr) 10%;
     grid-template-rows: auto;
     grid-template-areas:
+    "header header header header header"
+    ". clasificados clasificados clasificados ."
+    ". noticiasPrincipales noticiasPrincipales noticiasPrincipales ."
+    ". anunciantes anunciantes anunciantes ." 
+    ". tapaYHumor tapaYHumor tapaYHumor ."
+    ". main main aside ."
+    "footer footer footer footer footer"
+    ;
+}
+.hero__seccion {
+    grid-template-columns: 10% repeat(3, 1fr) 10%;
+    grid-template-rows: auto;
+    grid-template-areas:
         "header header header header header"
-        ". clasificados clasificados clasificados ."
+        ". seccion seccion seccion ."
         ". noticiasPrincipales noticiasPrincipales noticiasPrincipales ."
-        ". anunciantes anunciantes anunciantes ." 
-        ". tapaYHumor tapaYHumor tapaYHumor ."
+        ". main main aside ." 
         "footer footer footer footer footer"
     ;
 }
@@ -543,102 +575,314 @@ footer a {
     "footer footer footer footer footer"
     ;
 }
+header{
+    padding-right: 10%;
+    padding-left: 10%;
+}
 nav {
-    width: 80%;
+    width: 100%;
     top: 0px;
+} 
+aside {
+    flex-direction: column;
+    margin-left: 0px;
+
+}
+aside img {
+    width: 100%;
 }
 .footer {
-    width: 80%;
+    width: 100%;
 }
 }
 
 @media (max-width: 1024px){
-    html{
-        font-size: 1.5rem;
+    .abrir-menu,
+    .cerrar-menu {
+        display: block;
+        border: 0;
+        font-size: 1.25rem;
+        background-color: transparent;
+        cursor: pointer;
+    }
+
+    .abrir-menu {
+        background-color: #BBDBE3;
+        color: #1660A7;
+        padding: 5px;
+        font-size: 35px;
+        border-radius: 10px;
+        font-weight: bolder;
+    }
+
+    .cerrar-menu {
+        color: #1660A7;
+        font-size: 40px;
+    }
+
+    .nav {
+        width: auto;
+        opacity: 0;
+        visibility: hidden;
+        display: flex;
+        flex-direction: column;
+        align-items: end;
+        gap: 1rem;
+        position: absolute;
+        top: 0;
+        right: 10%;
+        bottom: 0;
+        top: 245px;
+        color: #1660A7;
+        font-size: 20px;
+    }
+
+    .nav.visible {
+        opacity: 1;
+        visibility: visible;
+    }
+    
+    .nav-list {
+        flex-direction: column;
+        align-items: end;
+    }
+
+    .nav-list li a {
+        color: #1660A7;
     }
 
     .hero__inicio {
-        grid-template-columns:1fr;
+        grid-template-columns:10% 1fr 10%;
         grid-template-rows: auto;
         grid-template-areas:
-            "header"
-            "clasificados"
-            "noticiasPrincipales"
-            "anunciantes"
-            "tapaYHumor"
-            "main"
-            "aside"
-            "footer"
+            "header header header"
+            ". clasificados ."
+            ". noticiasPrincipales ."
+            ". anunciantes ."
+            ". tapaYHumor ."
+            ". main ."
+            ". aside ."
+            "footer footer footer"
         ;
         
     }
-    .hero__noticia {
-        grid-template-columns:1fr;
+
+
+    .hero__seccion {
+        grid-template-columns: 10% 1fr 10%;
         grid-template-rows: auto;
         grid-template-areas:
-            "header"
-            "seccion"
-            "titulo"
-            "imagen"
-            "bajada"
-            "compartir"
-            "cuerpoNota"
-            "aside"
-            "footer"
+            "header header header"
+            ". seccion ."
+            ". noticiasPrincipales ."
+            ". main ."
+            ". aside ." 
+            "footer footer footer"
+        ;
+    }
+    
+.hero__noticia {
+    grid-template-columns: 10% 1fr 10%;
+    grid-template-rows: auto;
+    grid-template-areas:
+    "header header header"
+    ". seccion ."
+    ". titulo ."
+    ". imagen ." 
+    ". compartir ."
+    ". bajada ."
+    ". cuerpoNota ."
+    ". aside ."
+    "footer footer footer"
+    ;
+}
+
+    aside {
+        flex-direction: row;
+        justify-content: space-between;
+        margin-left: 0px;
+
+    }
+    aside img {
+        width: 49%;
+    }
+}
+
+@media (max-width: 768px){
+    
+header{
+    padding-right: 5%;
+    padding-left: 5%;
+}
+.nav {
+    right: 5%;
+}
+    .hero__inicio {
+        grid-template-columns:5% 1fr 5%;
+        grid-template-rows: auto;
+        grid-template-areas:
+            "header header header"
+            ". clasificados ."
+            ". noticiasPrincipales ."
+            ". anunciantes ."
+            ". tapaYHumor ."
+            ". main ."
+            ". aside ."
+            "footer footer footer"
         ;
         
+    }
+    
+    .hero__seccion {
+        grid-template-columns: 5% 1fr 5%;
+        grid-template-rows: auto;
+        grid-template-areas:
+            "header header header"
+            ". seccion ."
+            ". noticiasPrincipales ."
+            ". main ."
+            ". aside ." 
+            "footer footer footer"
+        ;
+    }
+
+    .hero__noticia {
+        grid-template-columns: 5% 1fr 5%;
+        grid-template-rows: auto;
+        grid-template-areas:
+        "header header header"
+        ". seccion ."
+        ". titulo ."
+        ". imagen ." 
+        ". compartir ."
+        ". bajada ."
+        ". cuerpoNota ."
+        ". aside ."
+        "footer footer footer"
+        ;
+    }
+
+    .noticiasPrincipales {
+        flex-direction: column;
+        gap: 20px;
+    }
+    .noticias1 {
+        width: 100%;
+    }
+    .noticias2 {
+        flex-direction: row;
+        width: 100%;
+        height: 250px;
+        gap: 20px;
+    }
+    .noticiasChica1 {
+        width: 50%;
+        height: 100%;
+    }
+    .noticiasChica2 {
+        width: 50%;
+        height: 100%;
+    }
+    .tapaYHumor {
+    flex-wrap: wrap;
+    }
+    .tapa {
+        width: 48%;
+    }
+    .humor {
+        width: 48%;
+    }
+    .actProfYVersionesAnteriores {
+        flex-direction: row;
+        justify-content: space-between;
+        width: 100%;
+    }
+    .actProfYVersionesAnteriores img {
+        width: 48%;
+        height: 100%;
+    }
+    .footer {
+        padding-left: 5%;
+        padding-right: 5%;
+    }
+}
+
+@media (max-width: 570px){
+    
+article h3 {
+    text-align: center;
+    font-size: 2.5rem;
+    padding-top: 20px;
+}
+
+    .footer{
+        width: 100%;
+        flex-direction: column;
+        align-items: center;
+    }
+    .informacion {
+    text-align: center;
+    }
+    .informacion p {
+        padding-bottom: 5px;
+    }
+    .redesSociales {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+    }
+    article{
+        flex-direction: column;
+    }
+    article p {
+        display: none;
+    }
+    article img {
+        width: 100%;
+        height: 400px;
+        padding-right: 0px;
+    }
+    
+
+}
+
+@media (max-width: 425px){
+    
+header h1 {
+    font-size: 3rem;
+}
+    
+
+    .hero__inicio {
+        grid-template-columns:5% 1fr 5%;
+        grid-template-rows: auto;
+        grid-template-areas:
+            "header header header"
+            ". clasificados ."
+            ". noticiasPrincipales ."
+            ". anunciantes ."
+            ". tapaYHumor ."
+            ". main ."
+            "footer footer footer"
+        ;
+        
+    }
+    .hero__seccion {
+        grid-template-columns: 5% 1fr 5%;
+        grid-template-rows: auto;
+        grid-template-areas:
+            "header header header"
+            ". seccion ."
+            ". noticiasPrincipales ."
+            ". main ."
+            "footer footer footer"
+        ;
     }
     nav {
         width: 100%;
-        margin-left: 100px ;
-        margin-right: 100px ;
         top: 0px;
     } 
-    .clasificados{
-        padding-left: 100px ;
-        padding-right: 100px ;
-    }
-    .noticiasPrincipales{
-        padding-left: 100px ;
-        padding-right: 100px ;
-    }
-    .anunciantes {
-        padding-left: 100px ;
-        padding-right: 100px ;
-    }
-    .tapaYHumor {
-        padding-left: 100px ;
-        padding-right: 100px ;
-    }
-    main {
-        padding-left: 100px ;
-        padding-right: 100px ;
-    }     
-    .nombreSeccion{
-        margin-left: 100px ;
-        margin-right: 100px ;
-    }     
-    .tituloNota{
-        padding-left: 100px ;
-        padding-right: 100px ;
-    }     
-    .imgPortada{
-        padding-left: 100px ;
-        padding-right: 100px ;
-    } 
-    .bajada{
-        margin-left: 100px ;
-        margin-right: 100px ;
-    } 
-    .cuerpoNota{
-        padding-left: 100px ;
-        padding-right: 100px ;
-    }
-    .footer{
-        width: 100%;
-        padding-left: 100px ;
-        padding-right: 100px ;
-    }
     aside {
         flex-direction: row;
         margin-left: 0px;
@@ -650,9 +894,65 @@ nav {
     aside img {
         width: 50%;
     }
-}
-@media (max-width: 425px){
-    html{
-        font-size: 3rem;
+    .noticias2 {
+        flex-direction: column;
+        width: 100%;
+        height: 500px;
+    }
+    .noticiasChica1 {
+        width: 100%;
+    }
+    .noticiasChica2 {
+        width: 100%;
+    }
+    .actProfYVersionesAnteriores {
+        flex-direction: column;
+    }
+
+    .actProfYVersionesAnteriores img{
+        width: 100%;
+    }
+    article {
+        flex-direction: column;
+    }
+    article img {
+        width: 100%;
+        height: 300px;
+        padding-right: 0px;
+    }
+    article p {
+        display: none;
+    }
+    aside {
+        display: none;
+    }
+    .footer{
+        width: 100%;
+        flex-direction: column;
+        align-items: center;
+    }
+    .informacion {
+    text-align: center;
+    }
+    .informacion p {
+        padding-bottom: 5px;
+    }
+    .contactos {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+    }
+    .redesSociales {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+    }
+    .humor {
+        width: 100%;
+    }
+    .tapa {
+        width: 100%;
     }
 }
