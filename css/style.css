@@ -91,6 +91,9 @@ header {
           padding: 5px;
           border-radius: 5px; }
 
+.abrir-menu, .cerrar-menu {
+  display: none; }
+
 .clasificados {
   grid-area: clasificados;
   background-color: #BBDBE3;
@@ -126,46 +129,27 @@ header {
   grid-template-columns: 50% 49%;
   grid-template-rows: 250px 250px;
   grid-template-areas: "nota1 nota2" "nota1 nota3"; }
-  .ContenedorNoticias .nota1 {
+  .ContenedorNoticias .nota1, .ContenedorNoticias .nota2, .ContenedorNoticias .nota3 {
     grid-area: nota1;
     position: relative; }
-    .ContenedorNoticias .nota1 img {
+    .ContenedorNoticias .nota1 img, .ContenedorNoticias .nota2 img, .ContenedorNoticias .nota3 img {
       object-fit: cover;
       width: 100%;
       height: 100%; }
-    .ContenedorNoticias .nota1:hover .titulo {
+    .ContenedorNoticias .nota1:hover .titulo, .ContenedorNoticias .nota2:hover .titulo, .ContenedorNoticias .nota3:hover .titulo {
       padding-top: 60px;
       padding-bottom: 60px;
-      background-color: #1661a7; }
+      background-color: #1660A7; }
   .ContenedorNoticias .nota2 {
-    grid-area: nota2;
-    position: relative; }
-    .ContenedorNoticias .nota2 img {
-      object-fit: cover;
-      width: 100%;
-      height: 100%; }
-    .ContenedorNoticias .nota2:hover .titulo {
-      padding-top: 60px;
-      padding-bottom: 60px;
-      background-color: #1661a7; }
+    grid-area: nota2; }
   .ContenedorNoticias .nota3 {
-    grid-area: nota3;
-    position: relative; }
-    .ContenedorNoticias .nota3 img {
-      width: 100%;
-      object-fit: cover;
-      width: 100%;
-      height: 100%; }
-    .ContenedorNoticias .nota3:hover .titulo {
-      padding-top: 60px;
-      padding-bottom: 60px;
-      background-color: #1661a7; }
+    grid-area: nota3; }
   .ContenedorNoticias .titulo {
     width: 100%;
     position: absolute;
     bottom: 0;
     left: 0;
-    background-color: #1661a7af;
+    background-color: #1660A7;
     color: #fff;
     font-size: 3rem;
     padding: 20px;
@@ -203,13 +187,13 @@ header {
     .tapaYHumor .tapa:hover .tituloSeccion {
       padding-top: 60px;
       padding-bottom: 60px;
-      background-color: #1661a7; }
+      background-color: #1660A7; }
     .tapaYHumor .tapa .tituloSeccion {
       position: absolute;
       bottom: 0;
       left: 0;
       width: 100%;
-      background-color: #1661a7af;
+      background-color: #1660A7;
       color: #fff;
       font-size: 3rem;
       padding: 20px;
@@ -376,7 +360,6 @@ footer {
     color: #fff; }
 
 .footer {
-  width: 80%;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -399,5 +382,180 @@ footer {
   .footer .faba img {
     width: 170px;
     margin: 10px; }
+
+@media (max-width: 1440px) {
+  .hero__inicio {
+    grid-template-columns: 10% repeat(3, 1fr) 10%;
+    grid-template-rows: auto;
+    grid-template-areas: "header header header header header" ". clasificados clasificados clasificados ." ". noticiasPrincipales noticiasPrincipales noticiasPrincipales ." ". anunciantes anunciantes anunciantes ."  ". tapaYHumor tapaYHumor tapaYHumor ." ". main main aside ." "footer footer footer footer footer"; }
+  .hero__seccion {
+    grid-template-columns: 10% repeat(3, 1fr) 10%;
+    grid-template-rows: auto;
+    grid-template-areas: "header header header header header" ". seccion seccion seccion ." ". noticiasPrincipales noticiasPrincipales noticiasPrincipales ." ". main main aside ."  "footer footer footer footer footer"; }
+  .hero__noticia {
+    grid-template-columns: 10% repeat(3, 1fr) 10%;
+    grid-template-rows: auto;
+    grid-template-areas: "header header header header header" ". seccion seccion seccion ." ". titulo titulo titulo ." ". imagen imagen imagen ."  ". bajada bajada compartir ." ". cuerpoNota cuerpoNota aside ." "footer footer footer footer footer"; }
+  header {
+    padding-right: 10%;
+    padding-left: 10%; }
+  aside {
+    flex-direction: column; }
+  aside img {
+    width: 100%; }
+  .footer {
+    width: 100%; } }
+
+@media (max-width: 1024px) {
+  .abrir-menu, .cerrar-menu {
+    display: block;
+    border: 0;
+    font-size: 1.25rem;
+    background-color: transparent;
+    cursor: pointer;
+    background-color: #BBDBE3;
+    color: #1660A7;
+    padding: 5px;
+    font-size: 35px;
+    border-radius: 10px;
+    font-weight: bolder; }
+  .cerrar-menu {
+    display: block;
+    border: 0;
+    font-size: 1.25rem;
+    background-color: transparent;
+    cursor: pointer;
+    color: #1660A7;
+    font-size: 40px; }
+  .nav {
+    width: auto;
+    opacity: 0;
+    visibility: hidden;
+    display: flex;
+    flex-direction: column;
+    align-items: end;
+    gap: 1rem;
+    position: absolute;
+    top: 0;
+    right: 10%;
+    bottom: 0;
+    top: 245px;
+    color: #1660A7;
+    font-size: 20px; }
+  .nav.visible {
+    opacity: 1;
+    visibility: visible; }
+  .nav-list {
+    flex-direction: column;
+    align-items: end; }
+    .nav-list li a {
+      color: #1660A7; }
+  .hero__inicio {
+    grid-template-columns: 10% 1fr 10%;
+    grid-template-rows: auto;
+    grid-template-areas: "header header header" ". clasificados ." ". noticiasPrincipales ." ". anunciantes ." ". tapaYHumor ." ". main ." ". aside ." "footer footer footer"; }
+  .hero__seccion {
+    grid-template-columns: 10% 1fr 10%;
+    grid-template-rows: auto;
+    grid-template-areas: "header header header" ". seccion ." ". noticiasPrincipales ." ". main ." ". aside ."  "footer footer footer"; }
+  .hero__noticia {
+    grid-template-columns: 10% 1fr 10%;
+    grid-template-rows: auto;
+    grid-template-areas: "header header header" ". seccion ." ". titulo ." ". imagen ."  ". compartir ." ". bajada ." ". cuerpoNota ." ". aside ." "footer footer footer"; }
+  .tituloSeccion {
+    font-size: 2rem !important; }
+  aside {
+    flex-direction: row;
+    justify-content: space-between;
+    margin-left: 0px; }
+  aside img {
+    width: 49%; } }
+
+@media (max-width: 768px) {
+  header {
+    padding-right: 5%;
+    padding-left: 5%; }
+    header .nav {
+      right: 5%; }
+  .titulo {
+    font-size: 2rem; }
+  .anunciantes {
+    display: none; }
+  .hero__inicio {
+    grid-template-columns: 5% 1fr 5%;
+    grid-template-rows: auto;
+    grid-template-areas: "header header header" ". clasificados ." ". noticiasPrincipales ." ". tapaYHumor ." ". main ." ". aside ." "footer footer footer"; }
+  .hero__seccion {
+    grid-template-columns: 5% 1fr 5%;
+    grid-template-rows: auto;
+    grid-template-areas: "header header header" ". seccion ." ". noticiasPrincipales ." ". main ." ". aside ." "footer footer footer"; }
+  .hero__noticia {
+    grid-template-columns: 5% 1fr 5%;
+    grid-template-rows: auto;
+    grid-template-areas: "header header header" ". seccion ." ". titulo ." ". imagen ." ". compartir ." ". bajada ." ". cuerpoNota ." ". aside ." "footer footer footer"; }
+  .ContenedorNoticias {
+    gap: 10px;
+    grid-template-columns: 50% 49%;
+    grid-template-rows: 250px 250px;
+    grid-template-areas: "nota1 nota1" "nota2 nota3"; }
+  .tapaYHumor {
+    flex-wrap: wrap; }
+    .tapaYHumor .tapa {
+      width: 48%; }
+  .footer {
+    padding-left: 5%;
+    padding-right: 5%; } }
+
+@media (max-width: 570px) {
+  article h3 {
+    text-align: center;
+    font-size: 2.5rem;
+    padding-top: 20px; }
+  .footer {
+    flex-direction: column;
+    align-items: center; }
+    .footer .informacion {
+      text-align: center; }
+      .footer .informacion p {
+        padding-bottom: 5px; }
+    .footer .contactos {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      align-items: center; }
+    .footer .redesSociales {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      align-items: center; }
+  article {
+    flex-direction: column; }
+    article p {
+      display: none; }
+    article img {
+      width: 100%;
+      height: 100%;
+      padding-right: 0px !important; }
+  aside {
+    display: none; } }
+
+@media (max-width: 425px) {
+  header h1 {
+    font-size: 3rem; }
+  .hero__inicio {
+    grid-template-columns: 5% 1fr 5%;
+    grid-template-rows: auto;
+    grid-template-areas: "header header header" ". clasificados ." ". noticiasPrincipales ." ". tapaYHumor ." ". main ." "footer footer footer"; }
+  .hero__seccion {
+    grid-template-columns: 5% 1fr 5%;
+    grid-template-rows: auto;
+    grid-template-areas: "header header header" ". seccion ." ". noticiasPrincipales ." ". main ." "footer footer footer"; }
+  .ContenedorNoticias {
+    gap: 10px;
+    grid-template-columns: 100%;
+    grid-template-rows: repeat(3, 250px);
+    grid-template-areas: "nota1" "nota2" "nota3"; }
+  .tapa {
+    width: 100%; } }
 
 /* UNIVERSALES TERMINA */
