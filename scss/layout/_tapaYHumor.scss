@@ -1,0 +1,42 @@
+.tapaYHumor {
+    grid-area: tapaYHumor;
+    /**/
+    @include flex (initial, space-between, initial);
+    /**/
+    width: 100%;
+    gap: 10px;
+
+    .tapa {
+        width: 25%;
+        position: relative;
+        height: 300px;
+
+        img {
+            height: 100%;
+            width: 100%;
+            object-fit: cover;
+        }
+
+        &:hover {
+            .tituloSeccion {
+                padding-top: 60px;
+                padding-bottom: 60px;
+                background-color: $color-secundario;
+            }
+        }
+
+        .tituloSeccion {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            background-color: $color-secundario;
+            color: #fff;
+            font-size: 3rem;
+            padding: 20px;
+            margin: 0;
+            text-align: center;
+            transition: padding 0.5s ease-in-out, background-color 0.5s ease-in-out;
+        }
+    }
+}

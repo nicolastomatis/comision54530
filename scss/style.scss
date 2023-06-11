@@ -1,0 +1,26 @@
+@import "./base/_typografias.scss";
+@import "./base/reset.scss";
+@import "./utilities/_variables.scss";
+@import "./utilities/mixins.scss";
+
+@import "./layout/_grillas.scss";
+
+@import "./layout/_header.scss";
+@import "./layout/_clasificados.scss";
+@import "./layout/_noticiasPrincipales.scss";
+@import "./layout/_anunciantes.scss";
+@import "./layout/_tapaYHumor.scss";
+@import "./layout/_noticiasSecundarias.scss";
+@import "./layout/_publicidad.scss";
+
+@import "./layout/_nota.scss";
+
+@import "./layout/_footer.scss";
+
+@import "./layout/_mediaQuery1440.scss";
+@import "./layout/_mediaQuery1024.scss";
+@import "./layout/_mediaQuery768.scss";
+@import "./layout/_mediaQuery570.scss";
+@import "./layout/_mediaQuery425.scss";
+
+/* UNIVERSALES TERMINA */

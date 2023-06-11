@@ -1,0 +1,24 @@
+@media (max-width: 1440px) {    
+    .hero__inicio {
+        @include grilla (10% repeat(3, 1fr) 10%, auto, "header header header header header"". clasificados clasificados clasificados ."". noticiasPrincipales noticiasPrincipales noticiasPrincipales ."". anunciantes anunciantes anunciantes ."". tapaYHumor tapaYHumor tapaYHumor ."". main main aside .""footer footer footer footer footer", initial, initial);
+    }
+    .hero__seccion {
+        @include grilla (10% repeat(3, 1fr) 10%, auto, "header header header header header"". seccion seccion seccion ."". noticiasPrincipales noticiasPrincipales noticiasPrincipales ."". main main aside .""footer footer footer footer footer", initial, initial);
+    }
+    .hero__noticia {
+        @include grilla (10% repeat(3, 1fr) 10%, auto, "header header header header header"". seccion seccion seccion ."". titulo titulo titulo ."". imagen imagen imagen ."". bajada bajada compartir ."". cuerpoNota cuerpoNota aside .""footer footer footer footer footer", initial, initial);
+    }
+    header{
+        padding-right: 10%;
+        padding-left: 10%;
+    }
+    aside {
+        flex-direction: column;
+    }
+    aside img {
+        width: 100%;
+    }
+    .footer {
+        width: 100%;
+    }
+    }

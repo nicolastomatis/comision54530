@@ -1,0 +1,54 @@
+footer {
+    grid-area: footer;
+    width: 100%;
+    background-color: $color-secundario;
+    font-family: roboto;
+    color: #fff;
+    @include flex (column, center, center);
+
+    .creador {
+        font-size: 1.5rem;
+        width: 100%;
+        text-align: center;
+        background-color: $color-principal;
+        color: $color-secundario;
+        padding: 10px;
+    }
+
+    a {
+        text-decoration: none;
+        color: #fff;
+    }
+}
+
+.footer {
+    width: 80%;
+    @include flex(initial, space-between, center);
+    padding-top: 20px;
+    font-size: 1.5rem;
+    padding-bottom: 20px;
+    padding-left: 10%;
+    padding-right: 10%;
+
+    h1 {
+        font-family: roboto slab;
+        font-weight: 300;
+        font-size: 4rem;
+    }
+
+    img {
+        border-radius: 5px;
+        width: 40px;
+        margin: 10px;
+    }
+
+    p {
+        font-weight: 400;
+        padding-top: 5px;
+    }
+
+    .faba img {
+        width: 170px;
+        margin: 10px;
+    }
+}

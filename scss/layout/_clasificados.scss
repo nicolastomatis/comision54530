@@ -1,0 +1,29 @@
+.clasificados {
+    grid-area: clasificados;
+    background-color: $color-principal;
+    color: $color-secundario;
+    font-size: 1.2rem;
+    
+    @include flex (column, center, initial);
+    
+    .listadoClasificados {
+        @include flex (row, space-between, initial);
+    }
+
+    p {
+        padding: 5px;
+    }
+
+    .boton-clasificados {
+        color: $color-secundario;
+        background-color: $color-principal;
+        padding: 5px;
+        text-decoration: none;
+        border-left: 5px solid #FFF;
+
+        &:hover {
+            color: $color-principal;
+            background-color: $color-secundario;
+        }
+    }
+}

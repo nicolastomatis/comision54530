@@ -1,0 +1,15 @@
+.hero__inicio {
+    width: 100%;
+    @include grilla (20% repeat(3, 1fr) 20%, auto, "header header header header header" ". clasificados clasificados clasificados ." ". noticiasPrincipales noticiasPrincipales noticiasPrincipales ." ". anunciantes anunciantes anunciantes ." ". tapaYHumor tapaYHumor tapaYHumor ." ". main main aside ." "footer footer footer footer footer", initial, initial);
+
+}
+
+.hero__seccion {
+    width: 100%;
+    @include grilla (20% repeat(3, 1fr) 20%, auto, "header header header header header" ". seccion seccion seccion ." ". noticiasPrincipales noticiasPrincipales noticiasPrincipales ." ". main main aside ." "footer footer footer footer footer", initial, initial);
+}
+
+.hero__noticia {
+    width: 100%;
+    @include grilla (20% repeat(3, 1fr) 20%, auto, "header header header header header" ". seccion seccion seccion ." ". titulo titulo titulo ." ". imagen imagen imagen ." ". bajada bajada compartir ." ". cuerpoNota cuerpoNota aside ." "footer footer footer footer footer", initial, initial);
+}

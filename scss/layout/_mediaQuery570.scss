@@ -1,0 +1,46 @@
+@media (max-width: 570px) {
+    article h3 {
+        text-align: center;
+        font-size: 2.5rem;
+        padding-top: 20px;
+    }
+
+    .footer {
+        flex-direction: column;
+        align-items: center;
+
+        .informacion {
+            text-align: center;
+
+            p {
+                padding-bottom: 5px;
+            }
+        }
+
+        .contactos {
+            @include flex (column, space-between, center);
+        }
+
+        .redesSociales {
+            @include flex (row, space-between, center);
+        }
+    }
+
+    article {
+        flex-direction: column;
+
+        p {
+            display: none;
+        }
+
+        img {
+            width: 100%;
+            height: 100%;
+            padding-right: 0px !important;
+        }
+    }
+
+    aside {
+        display: none;
+    }
+}

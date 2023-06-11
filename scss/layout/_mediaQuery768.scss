@@ -1,0 +1,48 @@
+@media (max-width: 768px) {
+    header {
+        padding-right: 5%;
+        padding-left: 5%;
+
+        .nav {
+            right: 5%;
+        }
+    }
+
+    .titulo {
+        font-size: 2rem;
+    }
+
+    .anunciantes {
+        display: none;
+    }
+
+    .hero__inicio {
+        @include grilla (5% 1fr 5%, auto, "header header header"". clasificados ."". noticiasPrincipales ."". tapaYHumor ."". main ."". aside .""footer footer footer", initial, initial);
+    }
+
+    .hero__seccion {
+        @include grilla (5% 1fr 5%, auto, "header header header"". seccion ."". noticiasPrincipales ."". main ."". aside .""footer footer footer", initial, initial);
+    }
+
+    .hero__noticia {
+        @include grilla (5% 1fr 5%, auto, "header header header"". seccion ."". titulo ."". imagen ."". compartir ."". bajada ."". cuerpoNota ."". aside .""footer footer footer", initial, initial);
+    }
+
+    .ContenedorNoticias {
+        gap: 10px;
+        @include grilla (50% 49%, repeat(2, 250), "nota1 nota1""nota2 nota3", initial, initial);
+    }
+
+    .tapaYHumor {
+        flex-wrap: wrap;
+
+        .tapa {
+            width: 48%;
+        }
+    }
+
+    .footer {
+        padding-left: 5%;
+        padding-right: 5%;
+    }
+}

@@ -1,0 +1,11 @@
+aside {
+    grid-area: aside;
+    @include flex (column, initial, end);
+    
+    margin-left: 40px;
+    margin-top: 20px;
+    img {
+        width: 100%;
+        margin-bottom: 20px;
+    }
+}

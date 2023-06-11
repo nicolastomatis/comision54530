@@ -1,0 +1,105 @@
+.nombreSeccion {
+    grid-area: seccion;
+    background-color: #1660A7;
+    color: #fff;
+    font-size: 1.5rem;
+    padding: 15px;
+}
+
+.tituloNota {
+    grid-area: titulo;
+
+    span {
+        font-size: 1.5rem;
+        color: #9E9EA1;
+    }
+
+    h2 {
+        color: $color-secundario;
+        font-size: 3.5rem;
+    }
+}
+
+.imgPortada {
+    grid-area: imagen;
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+}
+
+.bajada {
+    grid-area: bajada;
+    font-size: 1.5rem;
+    background-color: #DEDEDE;
+    border-left: 10px solid $color-secundario;
+    color: #89898a;
+    padding: 20px;
+}
+
+blockquote {
+    grid-area: bajada;
+    font-size: 1.5rem;
+    background-color: #DEDEDE;
+    border-left: 10px solid $color-secundario;
+    color: #89898a;
+    padding: 20px;
+}
+
+.compartir {
+    grid-area: compartir;
+    font-size: 1.5rem;
+    @include flex (initial, center, center);
+    margin: 5px;
+
+    img {
+        width: 40px;
+        border-radius: 5px;
+        padding: 0px;
+        margin-left: 10px;
+    }
+}
+
+.cuerpoNota {
+    grid-area: cuerpoNota;
+    margin-bottom: 40px;
+
+    p {
+        text-align: justify;
+        font-size: 1.5rem;
+        margin-bottom: 20px;
+        line-height: 150%;
+    }
+
+    h4 {
+        color: $color-secundario;
+        font-size: 2rem;
+        margin-top: 20px;
+        margin-bottom: 20px;
+    }
+
+    li {
+        font-size: 1.5rem;
+        text-align: justify;
+        margin-bottom: 10px;
+    }
+
+    a {
+        text-decoration: none;
+        color: $color-secundario;
+        font-weight: bold;
+        padding: 5px;
+
+        &:hover {
+            background-color: $color-secundario;
+            color: #fff;
+            padding: 5px;
+            border-radius: 5px;
+        }
+    }
+
+    .imgCuerpoNota {
+        width: 100%;
+        margin-top: 20px;
+        margin-bottom: 20px;
+    }
+}

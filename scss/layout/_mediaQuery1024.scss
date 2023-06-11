@@ -1,0 +1,71 @@
+@media (max-width: 1024px){
+    .abrir-menu {
+        display: block;
+        border: 0;
+        font-size: 1.25rem;
+        background-color: transparent;
+        cursor: pointer;
+
+        background-color: $color-principal;
+        color: $color-secundario;
+        padding: 5px;
+        font-size: 35px;
+        border-radius: 10px;
+        font-weight: bolder;
+    }
+    .cerrar-menu {        
+        display: block;
+        border: 0;
+        font-size: 1.25rem;
+        background-color: transparent;
+        cursor: pointer;
+
+        color: $color-secundario;
+        font-size: 40px;
+    }
+    .nav {
+        width: auto;
+        opacity: 0;
+        visibility: hidden;
+        @include flex (column, end, end);
+        gap: 1rem;
+        position: absolute;
+        top: 0;
+        right: 10%;
+        bottom: 0;
+        top: 245px;
+        color: $color-secundario;
+        font-size: 20px;
+    }
+    .nav.visible {
+        opacity: 1;
+        visibility: visible;
+    }
+    .nav-list {
+        flex-direction: column;
+        align-items: end;
+        li a {
+            color: $color-secundario;
+        }
+    }
+    .hero__inicio {
+        @include grilla (10% 1fr 10%, auto, "header header header"". clasificados ."". noticiasPrincipales ."". anunciantes ."". tapaYHumor ."". main ."". aside .""footer footer footer", initial, initial);     
+    }
+    .hero__seccion {
+        @include grilla (10% 1fr 10%, auto, "header header header"". seccion ."". noticiasPrincipales ."". main ."". aside .""footer footer footer", initial, initial);
+    }    
+    .hero__noticia {
+        @include grilla (10% 1fr 10%, auto, "header header header"". seccion ."". titulo ."". imagen ."". compartir ."". bajada ."". cuerpoNota ."". aside .""footer footer footer", initial, initial);
+    }
+    .tituloSeccion{
+        font-size: 2rem !important;
+    }
+    aside {
+        flex-direction: row;
+        justify-content: space-between;
+        margin-left: 0px;
+    }
+    aside img {
+        width: 49%;
+    }
+    }

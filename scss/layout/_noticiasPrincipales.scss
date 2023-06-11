@@ -1,0 +1,53 @@
+.ContenedorNoticias {
+    grid-area: noticiasPrincipales;
+    display: grid;
+    gap: 10px;
+    grid-template-columns: 50% 49%;
+    grid-template-rows: 250px 250px;
+    grid-template-areas:
+        "nota1 nota2"
+        "nota1 nota3"
+    ;
+
+    .nota1 {
+        grid-area: nota1;
+        position: relative;
+
+        img {
+            object-fit: cover;
+            width: 100%;
+            height: 100%;
+        }
+
+        &:hover {
+            .titulo {
+                padding-top: 60px;
+                padding-bottom: 60px;
+                background-color: $color-secundario;
+            }
+        }
+    }
+
+    .nota2 {
+        grid-area: nota2;
+        @extend .nota1;
+    }
+
+    .nota3 {
+        grid-area: nota3;
+        @extend .nota1;
+    }
+
+    .titulo {
+        width: 100%;
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        background-color: $color-secundario;
+        color: #fff;
+        font-size: 3rem;
+        padding: 20px;
+        text-align: center;
+        transition: padding 0.5s ease-in-out, background-color 0.5s ease-in-out;
+    }
+}
