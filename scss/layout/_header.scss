@@ -35,6 +35,10 @@ header {
         /**/
         font-size: 1.5rem;
     }
+    
+    .nav-mobile {
+        display: none;
+    } 
 
     ul {
         /* */
@@ -64,10 +68,4 @@ header {
         }
     }
 
-}
-.abrir-menu {
-    display: none;
-}
-.cerrar-menu{
-    @extend .abrir-menu;
 }

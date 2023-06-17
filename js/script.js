@@ -1,11 +1,15 @@
-const nav = document.querySelector("#nav");
-const abrir = document.querySelector("#abrir");
-const cerrar = document.querySelector("#cerrar");
+const menuBtn = document.querySelector('.menu-btn');
+const menu = document.querySelector('.menu-mobile');
 
-abrir.addEventListener("click", () => {
-    nav.classList.add("visible");
-})
+menuBtn.addEventListener('click', function() {
+  menuBtn.classList.toggle('active');
+  menu.classList.toggle('active');
 
-cerrar.addEventListener("click", () => {
-    nav.classList.remove("visible");
-})
+  if (!menu.classList.contains('active')) {
+    setTimeout(() => {
+      menu.classList.add('inactive');
+    }, 500);
+  } else {
+    menu.classList.remove('inactive');
+  }
+});

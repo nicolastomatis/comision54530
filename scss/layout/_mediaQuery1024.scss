@@ -1,4 +1,106 @@
-@media (max-width: 1024px){
+/* MEDIA QUERY 1024 */
+@media (max-width: 1024px) {
+    .nav {
+        display: none;
+    }    
+    .nav-mobile {
+        display: flex !important;
+        justify-content: end;
+    }
+
+    header ul {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    /* */
+    .menu-btn {
+        position: absolute;
+        width: 40px;
+        height: 40px;
+        cursor: pointer;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        background: #BBDBE3;
+        padding: 10px;
+        border-radius: 5px;
+    }
+
+    .line {
+        width: 100%;
+        height: 3px;
+        background-color: #1660A7;
+        transition: transform 0.3s ease, opacity 0.3s ease;
+    }
+
+    .line:not(:last-child) {
+        margin-bottom: 5px;
+    }
+
+    .menu-btn.active .line:nth-child(1) {
+        transform: translateY(8px) rotate(-45deg);
+    }
+
+    .menu-btn.active .line:nth-child(2) {
+        opacity: 0;
+    }
+
+    .menu-btn.active .line:nth-child(3) {
+        transform: translateY(-8px) rotate(45deg);
+    }
+
+    .menu-mobile {
+        position: absolute;
+        top: 65px;
+        width: 288px;
+        background-color: #BBDBE3;
+        text-align: end;
+        border-radius: 5px;
+        list-style: none;
+        opacity: 0;
+        transform-origin: top right;
+        transform: translateY(-5%);
+        transition: transform 0.3s cubic-bezier(0.75, 0, 0.125, 1),
+            opacity 0.3s cubic-bezier(0.75, 0, 0.125, 1);
+        box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+
+    }
+
+    .menu-mobile a {
+        text-decoration: none;
+        color: #1660A7;
+    }
+
+    .menu-mobile.active {
+        opacity: 1;
+        transform: translateY(0);
+    }
+
+    .menu-mobile.inactive {
+        transform: translateY(-5%);
+    }
+
+    .menu-mobile li {
+        padding: 10px;
+    }
+
+    @keyframes fadeInUp {
+        0% {
+            opacity: 0;
+            transform: translateY(-20px);
+        }
+
+        100% {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    }
+
+    /* */
     .abrir-menu {
         display: block;
         border: 0;
@@ -13,7 +115,8 @@
         border-radius: 10px;
         font-weight: bolder;
     }
-    .cerrar-menu {        
+
+    .cerrar-menu {
         display: block;
         border: 0;
         font-size: 1.25rem;
@@ -23,6 +126,7 @@
         color: $color-secundario;
         font-size: 40px;
     }
+
     .nav {
         width: auto;
         opacity: 0;
@@ -37,35 +141,46 @@
         color: $color-secundario;
         font-size: 20px;
     }
+
     .nav.visible {
         opacity: 1;
         visibility: visible;
     }
+
     .nav-list {
         flex-direction: column;
         align-items: end;
+
         li a {
             color: $color-secundario;
         }
     }
+
     .hero__inicio {
-        @include grilla (10% 1fr 10%, auto, "header header header"". clasificados ."". noticiasPrincipales ."". anunciantes ."". tapaYHumor ."". main ."". aside .""footer footer footer", initial, initial);     
+        @include grilla (10% 1fr 10%, auto, "header header header" ". clasificados ." ". noticiasPrincipales ." ". anunciantes ." ". tapaYHumor ." ". main ." ". aside ." "footer footer footer", initial, initial);
     }
+
     .hero__seccion {
-        @include grilla (10% 1fr 10%, auto, "header header header"". seccion ."". noticiasPrincipales ."". main ."". aside .""footer footer footer", initial, initial);
-    }    
-    .hero__noticia {
-        @include grilla (10% 1fr 10%, auto, "header header header"". seccion ."". titulo ."". imagen ."". compartir ."". bajada ."". cuerpoNota ."". aside .""footer footer footer", initial, initial);
+        @include grilla (10% 1fr 10%, auto, "header header header" ". seccion ." ". noticiasPrincipales ." ". main ." ". aside ." "footer footer footer", initial, initial);
     }
-    .tituloSeccion{
+
+    .hero__noticia {
+        @include grilla (10% 1fr 10%, auto, "header header header" ". seccion ." ". titulo ." ". imagen ." ". compartir ." ". bajada ." ". cuerpoNota ." ". aside ." "footer footer footer", initial, initial);
+    }
+
+    .tituloSeccion {
         font-size: 2rem !important;
     }
+
     aside {
         flex-direction: row;
         justify-content: space-between;
         margin-left: 0px;
     }
+
     aside img {
         width: 49%;
     }
-    }
+}
+
+/* FIN MEDIA QUERY 1024 */

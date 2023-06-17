@@ -1,15 +1,12 @@
+/* MEDIA QUERY 768 */
 @media (max-width: 768px) {
     header {
         padding-right: 5%;
         padding-left: 5%;
-
-        .nav {
-            right: 5%;
-        }
     }
 
     .titulo {
-        font-size: 2rem;
+        font-size: 2rem !important;
     }
 
     .anunciantes {
@@ -46,3 +43,4 @@
         padding-right: 5%;
     }
 }
+/* FIN MEDIA QUERY 768 */
